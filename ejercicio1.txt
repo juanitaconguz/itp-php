@@ -1,0 +1,27 @@
+<?PHP
+/*
+para ael proceso de pago de un empleado se debe ingresar la cantidad ganada.
+ Al ingresar la cantidad se tiene que calcular los impuestos, tales como IVA (15%) 
+e ISR (10%), mostrando la cantidad de los impuestos
+y el sueldo total para el empreado
+*/
+
+
+#arreglo asociativo
+$emple = 
+[
+	'name'  	=>'Elena',
+	'apellidos' 	=>'Luna Luna',
+	'sueldo' 	=>12000,
+];
+
+$iva = 0;
+$isr = 0;
+$iva = $emple['sueldo'] * .1;
+$isr = $emple['sueldo'] * .15;
+
+echo "\n$iva";
+echo "\n$isr";
+
+
+?>
