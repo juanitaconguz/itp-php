@@ -19,9 +19,7 @@ foreach ($departamentos as $departamento => $empleados)
 {
    echo "\n$departamento";
    $totalDepartamento = 0;
-//use usa variables de contexto y la convietrte en closure
-// array walk esta haciendo internamente un foreach
-   array_walk($empleados, function($empleado) use($departamento, $totalDepartamento) 
+   foreach($empleados as $empleado)
    {
       $iva = $empleado['sueldo'] * .15;
       $isr = $empleado['sueldo'] * .1;
@@ -29,7 +27,7 @@ foreach ($departamentos as $departamento => $empleados)
       $totalDepartamento += $total;
       echo "\n{$empleado['nombre']}   {$empleado['sueldo']}    ";
       echo "$departamento      $iva        $isr             $total";
-   });
+   }
 }
 
 ?>

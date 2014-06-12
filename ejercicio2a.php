@@ -9,7 +9,7 @@ y el sueldo total para el empleado, DE VARIOS EMPLEADOS
 
 $empleados = require 'empleados.php';
 
-echo "nombre     --   sueldo\n";
+echo "nombre                --   sueldo\n";
 foreach($empleados as $empleado) {
    $empleado['sueldo'] * .10;
    $empleado['sueldo'] * .15;
